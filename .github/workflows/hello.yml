@@ -1,14 +1,14 @@
 name: Say hello 
 
 on:
-    push:
-         branches:
-            - main
+  push:
+    branches:
+      - main
 
 jobs:
-    hello_word:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Echo the message
-              run: |
-                echo "hola midu!"
+  hello_word:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo the message
+        run: |
+          echo "hola midu!"
