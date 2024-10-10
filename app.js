@@ -2,7 +2,7 @@ const express = require('express') // Importa el framework Express
 const app = express() // Crea una instancia de la aplicación Express
 
 // Heroku dinámicamente asigna un puerto
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 3000
 
 // Sirve los archivos estáticos desde la carpeta "dist"
 app.use(express.static('dist'))
