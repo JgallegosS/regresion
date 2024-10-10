@@ -1,4 +1,3 @@
-[![Deployment Pipeline](https://github.com/JgallegosS/regresion/actions/workflows/pipeline.yml/badge.svg)](https://github.com/JgallegosS/regresion/actions/workflows/pipeline.yml)
 
 # Full Stack open CI/CD
 
