@@ -1,22 +1,14 @@
-name: Deploy to GitHub Pages
-
-on:
-  push:
-    branches:
-      - main  # Cambia a la rama de tu proyecto si es diferente
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
+      - name: Check out code
         uses: actions/checkout@v2
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '16'  # Cambia la versión según tu proyecto
+          node-version: '16'
 
       - name: Install dependencies
         run: npm install
@@ -27,5 +19,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build  # Cambia 'build' según la carpeta generada por tu proyecto
+          github_token: ${{ secrets.GH_TOKEN }}
+          publish_dir: ./build
