@@ -9,5 +9,5 @@ app.use(express.static('dist'))
 
 // Inicia el servidor en el puerto especificado
 app.listen(PORT, () => {
-    console.log(`Server started on port 5000`); // Muestra un mensaje en la consola cuando el servidor inicia
-});
+  console.log('Server started on port 5000') // Muestra un mensaje en la consola cuando el servidor inicia
+})
