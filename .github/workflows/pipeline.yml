@@ -3,31 +3,29 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # O la rama que deseas utilizar para el despliegue
+      - main  # Cambia a la rama de tu proyecto si es diferente
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    # Build your project here (if necessary)
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '17'  # Cambia esta versión según sea necesario
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '17'  # Cambia la versión según tu proyecto
 
-    - name: Install dependencies
-      run: npm install
+      - name: Install dependencies
+        run: npm install
 
-    - name: Build project
-      run: npm run build
+      - name: Build project
+        run: npm run build
 
-    # Despliegue en GitHub Pages
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build  # Cambia 'build' según la carpeta generada por tu proyecto
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build  # Cambia 'build' según la carpeta generada por tu proyecto
