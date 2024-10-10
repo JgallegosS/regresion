@@ -28,4 +28,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build  # Cambia 'build' según la carpeta generada por tu proyecto
+          publish_dir: ./build  # Cambia 'build' según la carpeta generada por tu proyect0
